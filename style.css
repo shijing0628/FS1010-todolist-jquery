@@ -1,0 +1,123 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #161117;
+}
+main {
+  width: 50%;
+  position: relative;
+}
+.container {
+  width: 40%;
+}
+
+.input {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  align-items: center;
+}
+.form-control {
+  background-color: transparent;
+  border: none;
+  height: 50px;
+  border-radius: 5px;
+  width: 100%;
+  padding: 0px 20px;
+  font-size: 16px;
+  color: #838284;
+  box-shadow: -6px -6px 10px rgb(255, 255, 255, 0.03),
+    6px 6px 10px rgb(10, 8, 10, 0.8),
+    inset -6px -6px 10px rgb(255, 255, 255, 0.03),
+    inset 6px 6px 10px rgb(10, 8, 10, 0.8);
+}
+.form-control:focus {
+  outline: none;
+}
+
+.todo-list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+  color: #716973;
+  background: #221525;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-top: 15px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+}
+.left-cont input {
+  display: none;
+  cursor: pointer;
+}
+.left-cont label {
+  position: relative;
+  cursor: pointer;
+}
+.left-cont span {
+  color: #fff;
+}
+.left-cont label::before {
+  content: "";
+  padding: 11px;
+  display: inline-block;
+  position: relative;
+  margin-right: 8px;
+  vertical-align: middle;
+  background: #412d46;
+  border-radius: 3px;
+}
+.left-cont input:checked + label::before {
+  background: #ffc800;
+}
+.left-cont input:checked + label::after {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  top: 4px;
+  left: 8px;
+  width: 5px;
+  height: 12px;
+  border: 1px solid #221525;
+  border-width: 0px 2px 2px 0px;
+  transform: rotate(45deg);
+}
+
+.remove {
+  color: #ff0047;
+  cursor: pointer;
+  line-height: 1;
+  transform: translateX(48px);
+  transition: 0.5s;
+}
+.remove.active {
+  transform: translateX(0px);
+  transition: 0.5s;
+}
+
+.text-disable {
+  color: gray !important;
+}
+
+.btn {
+  position: absolute;
+  bottom: 13px;
+  right: 20px;
+  padding: 10px 15px;
+  border-radius: 5px;
+  background-color: #391b3f;
+  color: #fff;
+  transition: all 0.5s;
+}
+.btn:hover {
+  border: 2px solid #391b3f;
+  background-color: transparent;
+  color: tomato;
+}
