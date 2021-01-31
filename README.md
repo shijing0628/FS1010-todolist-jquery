@@ -13,9 +13,7 @@ html, css, jquery, jquery-ui
 - add style file.
 - add localStorage feature.
 - Each function has comment on the top.
-
-    <br>
-    ![](2021-01-31-16-42-24.png)
-
-    <br>
+  <br>
+  ![](2021-01-31-16-42-24.png)
+  <br>
   ![](2021-01-31-16-52-20.png)
