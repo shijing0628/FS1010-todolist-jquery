@@ -242,7 +242,7 @@
       }
 
       main h1 {
-        font-size: 63px;
+        font-size: 40px;
         line-height: 1;
         color: inherit;
       }
@@ -295,6 +295,27 @@
       .text-muted {
         color: #999;
       }
+      .input {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 30px;
+        align-items: center;
+      }
+      .form-control {
+        background-color: transparent;
+        border: none;
+        height: 50px;
+        border-radius: 5px;
+        width: 100%;
+        padding: 0px 20px;
+        font-size: 16px;
+        color: #838284;
+        box-shadow: -6px -6px 10px rgb(255, 255, 255, 0.8),
+          6px 6px 10px rgb(10, 8, 10, 0.4);
+      }
+      .form-control:focus {
+        outline: none;
+      }
     </style>
   </head>
   <body>
@@ -302,6 +323,7 @@
       <div class="container">
         <div class="page-header">
           <h1>jQuery To-Do Application</h1>
+          <p class="save-history">Auto save history</p>
         </div>
 
         <form>
@@ -400,7 +422,7 @@
           }
         });
 
-        // remove single item
+        // remove single item, only remove the last item once click trash bin icon
         $(document).on("click", ".remove", function () {
           let currentTask = $("ul li:last-child").text();
           let upDateTasks = [];
@@ -409,12 +431,12 @@
           });
           localStorage.setItem("tasks", JSON.stringify(upDateTasks));
           $(this).parent().remove();
+          location.reload();
         });
 
         // delete all tasks in the list
         $(document).on("click", ".btn", function () {
           $(".todo-list").remove();
-
           localStorage.setItem("tasks", JSON.stringify([]));
           location.reload();
         });
