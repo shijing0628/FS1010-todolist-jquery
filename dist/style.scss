@@ -1,0 +1,175 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: url("./bg.jpg") no-repeat;
+  background-size: cover;
+  object-fit: cover;
+}
+main {
+  width: 60%;
+  position: relative;
+  opacity: 0.85;
+  box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.2);
+}
+.container {
+  width: 50%;
+}
+.save-history {
+  text-align: center;
+  color: tomato;
+}
+.todo-list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+  color: #716973;
+  background: #50248f;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-top: 15px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.4);
+}
+.left-cont input {
+  display: none;
+  cursor: pointer;
+}
+.left-cont label {
+  position: relative;
+  cursor: pointer;
+}
+.left-cont span {
+  color: #fff;
+}
+.left-cont label::before {
+  content: "";
+  padding: 11px;
+  display: inline-block;
+  position: relative;
+  margin-right: 8px;
+  vertical-align: middle;
+  background: #f5f0fc;
+  border-radius: 3px;
+}
+.left-cont input:checked + label::before {
+  background: #ffc800;
+}
+.left-cont input:checked + label::after {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  top: 4px;
+  left: 8px;
+  width: 5px;
+  height: 12px;
+  border: 1px solid #221525;
+  border-width: 0px 2px 2px 0px;
+  transform: rotate(45deg);
+}
+
+.remove {
+  color: tomato;
+  cursor: pointer;
+  line-height: 1;
+  transform: translateX(48px);
+  transition: 0.5s;
+}
+.remove.active {
+  transform: translateX(0px);
+  transition: 0.5s;
+}
+
+.text-disable {
+  color: grey !important;
+  text-decoration: line-through;
+}
+
+.btn {
+  position: absolute;
+  bottom: 13px;
+  right: 20px;
+  padding: 10px 15px;
+  border-radius: 5px;
+  border: 2px solid #391b3f;
+  color: tomato;
+  background-color: transparent;
+  transition: all 0.5s;
+  box-shadow: 2px 4px 4px 3px rgba(0, 0, 0, 0.1);
+}
+.btn:hover {
+  background-color: #391b3f;
+  color: #fff;
+}
+
+@mixin dots($count) {
+  $text-shadow: ();
+  @for $i from 0 through $count {
+    $text-shadow: $text-shadow,
+      (-0.5+ (random()) * 3) +
+        em
+        (-0.5+ (random()) * 3) +
+        em
+        7px
+        hsla(random() * 360, 100%, 50%, 0.9);
+  }
+  text-shadow: $text-shadow;
+}
+
+head {
+  display: block;
+  font-size: 52px;
+  color: transparent;
+}
+
+head::before,
+head::after,
+body::before,
+body::after {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 3em;
+  height: 3em;
+  content: ".";
+  mix-blend-mode: screen;
+  animation: 44s -27s move infinite ease-in-out alternate;
+}
+
+body::before {
+  @include dots(40);
+  animation-duration: 44s;
+  animation-delay: -27s;
+}
+
+body::after {
+  @include dots(40);
+  animation-duration: 43s;
+  animation-delay: -32s;
+}
+
+head::before {
+  @include dots(40);
+  animation-duration: 42s;
+  animation-delay: -23s;
+}
+
+head::after {
+  @include dots(40);
+  animation-duration: 41s;
+  animation-delay: -19s;
+}
+
+@keyframes move {
+  from {
+    transform: rotate(0deg) scale(12) translateX(-20px);
+  }
+  to {
+    transform: rotate(360deg) scale(18) translateX(20px);
+  }
+}

@@ -4,12 +4,11 @@
   "description": "2021-1-31",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "deploy": "gh-pages -d dist"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/shijing0628/FS1010-todolist-jquery.git"
+    "url": "https://github.com/shijing0628/FS1010-todolist-jquery.git"
   },
   "keywords": [],
   "author": "",
