@@ -27,7 +27,7 @@ html, css, jquery, jquery-ui
 - Advanced Things to Try:
   drag/drop sort items (have a look at jQuery UI)
 - when the page loads focus on the input field (i.e. cursor should load inside input, ready to type)
-- SASS creating animation background
+- SASS creating animation background (Problem is once add this animation, buttons function seems sometimes working, sometimes not working. Remove this feature for now.)
   <br>
 
 **Todo list has the following features and functions**
