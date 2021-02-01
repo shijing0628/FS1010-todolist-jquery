@@ -17,6 +17,7 @@ html, css, jquery, jquery-ui
 - click trash bin icon, the bottom item is removed.
 - Each function has comment on the top.
   <br>
+  ![](2021-02-01-09-23-03.png)
   <br>
   ![](2021-01-31-16-42-24.png)
   <br>

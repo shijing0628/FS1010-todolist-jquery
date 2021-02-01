@@ -7,11 +7,15 @@ body {
   align-items: center;
   justify-content: center;
   height: 100vh;
-  background: #bbe5b3;
+  background: url("./bg.jpg") no-repeat;
+  background-size: cover;
+  object-fit: cover;
 }
 main {
   width: 60%;
   position: relative;
+  opacity: 0.85;
+  box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.2);
 }
 .container {
   width: 50%;
