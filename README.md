@@ -21,8 +21,7 @@ html, css, jquery, jquery-ui
 
 ### Optional Extra's to Add:
 
--allow the removal of items completely from the list
-
+- allow the removal of items completely from the list
 - automatically move completed items to the bottom
 - error if input is empty
 - Advanced Things to Try:
