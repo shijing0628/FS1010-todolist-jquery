@@ -39,15 +39,12 @@ $(document).ready(function () {
     tasks.push(inputVal);
     localStorage.setItem("tasks", JSON.stringify(tasks));
     $(this).val("");
-   } else {
     $(".form-control")
-     .parent()
-     .append(
-      "<div class='alert'>Input Field is empty! Please input your task</div>"
-     );
-    setTimeout(function () {
-     location.reload();
-    }, 3000);
+     .parent().next().removeClass('alert').addClass('hide-alert');
+   }
+   else {
+    $(".form-control")
+     .parent().next().removeClass('hide-alert').addClass('alert');
    }
   }
  });
